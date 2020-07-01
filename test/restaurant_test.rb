@@ -59,5 +59,16 @@ class RestaurantTest < Minitest::Test
     assert_equal true, restaurant1.open_for_lunch?
   end
 
+  def test_edge_case_if_open_for_lunch
+    restaurant1 = Restaurant.new('11:59', 'Bob')
+
+    assert_equal true, restaurant1.open_for_lunch?
+  end
+
+  def test_if_not_open_for_lunch
+    restaurant1 = Restaurant.new('12:01', 'Janes')
+
+    assert_equal true, restaurant1.open_for_lunch?
+  end
   #Iteration 4 Tests:
 end
