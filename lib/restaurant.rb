@@ -8,15 +8,23 @@ class Restaurant
   end
 
   def closing_time(hours)
-    (@opening_time.to_i + hours).to_s + ':00'
+    (opening_time.to_i + hours).to_s + ':00'
   end
 
   def add_dish(dish)
-    @dishes << dish
+    dishes << dish
   end
 
   def open_for_lunch?
     opening_time.to_i < 12
+  end
+
+  def menu_dish_names
+    menu = []
+    dishes.each do |dish|
+      menu << dish.upcase
+    end
+    menu
   end
 
 #

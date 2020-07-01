@@ -70,5 +70,25 @@ class RestaurantTest < Minitest::Test
 
     assert_equal false, restaurant1.open_for_lunch?
   end
+
+  # def test_if_menu_prints
+  #   restaurant = Restaurant.new('16:00', 'Il Poggio')
+  #
+  #   restaurant.add_dish('Burrata')
+  #   restaurant.add_dish('Pizzetta')
+  #   restaurant.add_dish('Ravioli')
+  #
+  #   assert_equal ['Burrata', 'Pizzetta', 'Ravioli'], restaurant.menu_dish_names
+  # end
+
+  def test_if_menu_prints_and_is_capitalized
+    restaurant1 = Restaurant.new('16:00', 'Il Poggio')
+
+    restaurant1.add_dish('Burrata')
+    restaurant1.add_dish('Pizzetta')
+    restaurant1.add_dish('Ravioli')
+
+    assert_equal ['BURRATA', 'PIZZETTA', 'RAVIOLI'], restaurant1.menu_dish_names
+  end
   #Iteration 4 Tests:
 end
