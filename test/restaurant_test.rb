@@ -97,4 +97,26 @@ class RestaurantTest < Minitest::Test
 
     assert_equal "Il Poggio will be closing at 9AM. Thank you!", restaurant1.announce_closing_time(1)
   end
+
+# CANT FIGURE OUT ERROR CODE... Tried research, but not enough time
+  # main $🐧ruby test/restaurant_test.rb
+  # Run options: --seed 10818
+  # # Running:
+  # Il Poggio will be closing at 9:00AM. Thank you!
+  # 11/11: -_-_-_-_-_*_,------,
+  # 10/11: -_-_-_-_-_*_|  /\_/\
+  #  1/11: -_-_-_-_-_*~|_( x .x)
+  #  0/11: -_-_-_-_-_* ""  ""
+  #
+  # You've Nyaned for 0.06 seconds
+  # 
+  # 11 examples, 1 failure
+  #
+  #   1) Failure:
+  # RestaurantTest#test_announce_closing_time_prints_string [test/restaurant_test.rb:98]:
+  # --- expected
+  # +++ actual
+  # @@ -1 +1 @@
+  # -"Il Poggio will be closing at 9AM. Thank you!"
+  # +nil
 end
