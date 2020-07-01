@@ -27,14 +27,16 @@ class Restaurant
     menu
   end
 
-  def announce_closing_time(x)
+  def announce_closing_time(hours)
     close = closing_time(hours).to_i
     if close < 12
       x = closing_time(hours) + "AM"
       puts "#{name} will be closing at #{x}. Thank you!"
-    else
+    elsif
       x = (closing_time(hours).to_i - 12)+ "PM"
       puts "#{name} will be closing at #{x}. Thank you!"
+    else
+      puts "Oops"
     end
   end
 
